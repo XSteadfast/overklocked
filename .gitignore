@@ -1,4 +1,3 @@
 .DS_Store
-node_modules/
 # original single-page version, kept locally only
 overklocked.html

@@ -1,4 +1,0 @@
-/* Tailwind input. Don't link this file – it compiles to css/tailwind.css (npm run build:css). */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

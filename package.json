@@ -1,8 +1,0 @@
-{
-  "name": "overklocked-site",
-  "private": true,
-  "scripts": {
-    "build:css": "npx --yes tailwindcss@3 -i css/tailwind.src.css -o css/tailwind.css --minify",
-    "watch:css": "npx --yes tailwindcss@3 -i css/tailwind.src.css -o css/tailwind.css --watch"
-  }
-}
