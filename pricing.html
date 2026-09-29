@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Parties | OverKlocked Gaming</title>
+    <meta name="description" content="Hourly rates, memberships, day passes and party packages at OverKlocked Gaming in Edmonton.">
+    <link rel="icon" type="image/png" href="images/logo-nav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="pricing" class="antialiased min-h-screen flex flex-col">
+
+    <nav class="site-nav fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="nav-bar flex items-center justify-between h-20">
+                <a href="index.html" class="nav-logo flex-shrink-0" aria-label="OverKlocked Gaming home">
+                    <img src="images/logo-nav.png" alt="OverKlocked Gaming">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" data-nav="home" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Home</a>
+                    <a href="games.html" data-nav="games" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Games</a>
+                    <a href="pricing.html" data-nav="pricing" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Pricing</a>
+                    <a href="about.html" data-nav="about" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">About</a>
+                    <a href="#contact" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Contact</a>
+                    <a href="pricing.html#party-packages" class="btn btn-primary btn-sm">Book a Party</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gaming-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="index.html" data-nav="home" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Home</a>
+                <a href="games.html" data-nav="games" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Games</a>
+                <a href="pricing.html" data-nav="pricing" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Pricing</a>
+                <a href="about.html" data-nav="about" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">About</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Contact</a>
+                <a href="pricing.html#party-packages" class="btn btn-primary btn-sm w-full mt-2">Book a Party</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <header class="page-hero">
+            <img src="images/dialedIN.jpg" alt="" class="bg-media" style="object-position: center;">
+            <h1 class="text-5xl md:text-6xl font-display font-bold uppercase tracking-tight mb-4 fade-up delay-1">Our <span class="accent">Pricing</span></h1>
+            <p class="hero-subtitle fade-up delay-2">Pay to Play<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Not to Sit</p>
+            <p class="muted text-lg max-w-2xl mx-auto fade-up delay-2">Simple and fair. You only pay for the time you actually spend playing, and anything you don't use stays saved on your account for your next visit.</p>
+        </header>
+
+        <div class="max-w-5xl mx-auto px-4 pb-8">
+            <div class="text-center mb-8">
+                <a href="#party-packages" class="btn btn-outline btn-sm">Jump to Party Packages ↓</a>
+            </div>
+
+            <section class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">Hourly <span class="accent">Rates</span></h2>
+                <p class="section-subtitle">PC<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Console<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Same Price</p>
+                <p class="section-desc">You're only charged for the time you're actually in our system, so hopping from console to PC won't cost you extra. Just let our staff know you're switching.</p>
+            </div>
+                <div class="grid md:grid-cols-2 gap-6 items-start">
+                <article class="card accent-bar p-7 md:p-9 pl-10">
+                    <h2 class="text-3xl font-display font-bold uppercase mb-1">Regular</h2>
+                    <p class="muted mb-5">Perfect for checking out the vibes.</p>
+                    <div class="text-4xl font-display font-bold mb-5 pb-5 border-b border-white/10">Pay<span class="text-base muted font-sans font-normal"> as you go</span></div>
+                    <div class="price-row"><span>1 Hour</span><span class="font-display font-bold">$8</span></div>
+                    <div class="price-row"><span>Fri or Sat Day Pass</span><span class="font-display font-bold">$48</span></div>
+                </article>
+
+                <article class="card card-featured accent-bar p-7 md:p-9 pl-10">
+                    <div class="flex flex-wrap items-center justify-between gap-3 mb-1">
+                        <h2 class="text-3xl font-display font-bold uppercase accent">Membership</h2>
+                        <span class="badge">Best Value</span>
+                    </div>
+                    <p class="muted mb-5">Huge savings plus extra freebies.</p>
+                    <div class="text-4xl font-display font-bold mb-5 pb-5 border-b border-white/10">$48<span class="text-base muted font-sans font-normal"> / year</span></div>
+                    <div class="price-row"><span>1 Hour</span><span class="font-display font-bold">$7</span></div>
+                    <div class="price-row"><span>4 Hours</span><span class="font-display font-bold">$26<span class="per">$6.50/hr</span></span></div>
+                    <div class="price-row"><span>10 Hours</span><span class="font-display font-bold">$60<span class="per">$6.00/hr</span></span></div>
+                    <div class="price-row"><span>20 Hours</span><span class="font-display font-bold">$105<span class="per">$5.25/hr</span></span></div>
+                    <div class="price-row"><span>40 Hours</span><span class="font-display font-bold">$180<span class="per">$4.50/hr</span></span></div>
+                    <div class="price-row"><span>Fri or Sat Day Pass</span><span class="font-display font-bold">$40</span></div>
+                    <div class="card-inset mt-6 p-5">
+                        <h3 class="font-display font-bold accent uppercase tracking-wider mb-3">Membership Extras</h3>
+                        <ul class="space-y-2 text-white/90">
+                            <li class="flex gap-2"><span class="accent">✓</span> 3 free hours ($24 value)</li>
+                            <li class="flex gap-2"><span class="accent">✓</span> Free day pass on your birthday (or surrounding weekend)</li>
+                        </ul>
+                    </div>
+                    <p class="muted text-sm mt-5">Sign up at our front desk.</p>
+                </article>
+            </div>
+            </section>
+
+            <section id="party-packages" class="section-block border-t border-white/10 pt-8">
+            <div class="section-head">
+                <h2 class="section-title">Party <span class="accent">Packages</span></h2>
+                <p class="section-subtitle">Book Any Section<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>All Year</p>
+                <p class="section-desc">Birthdays, team nights or just a big squad hangout. Pick a package and we'll have everything set up for you.</p>
+            </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="card card-hover p-8 flex flex-col">
+                        <h3 class="text-3xl font-display font-bold uppercase mb-2">Standard Package</h3>
+                        <div class="text-5xl font-display font-bold accent mb-6">$190</div>
+                        <ul class="space-y-3 muted mb-8 text-lg">
+                            <li class="flex gap-3"><span class="accent">✓</span> 2 hours of gaming</li>
+                            <li class="flex gap-3"><span class="accent">✓</span> Up to 9 guests included</li>
+                            <li class="flex gap-3"><span class="accent">✓</span> Private section of OverKlocked</li>
+                            <li class="flex gap-3"><span class="accent">✓</span> 1 pop and 1 candy per guest</li>
+                        </ul>
+                        <div class="card-inset p-4 text-sm muted mt-auto">
+                            <div>+ $19 per additional guest</div>
+                            <div>+ $80 per additional hour</div>
+                        </div>
+                    </article>
+
+                    <article class="card card-hover overflow-hidden flex flex-col">
+                        <div class="photo rounded-none border-0 aspect-[16/8]">
+                            <img src="images/machines.jpg" alt="Rows of gaming PCs under blue lighting" loading="lazy">
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow">
+                            <h3 class="text-3xl font-display font-bold uppercase mb-2">The Red Room</h3>
+                            <div class="text-5xl font-display font-bold accent mb-5">$170<span class="text-lg muted font-sans font-normal"> / hour</span></div>
+                            <p class="muted leading-relaxed">In the rear of the store, the Red Room has 21 custom built gaming PCs with 1440p monitors. Book it and block it off by the hour.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-block">
+                <div class="card card-featured p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-40 pointer-events-none" style="background: radial-gradient(ellipse at top, rgba(47,180,255,.35), transparent 60%);"></div>
+                    <div class="relative">
+            <div class="section-head">
+                <h2 class="section-title">Ready to <span class="accent">Book?</span></h2>
+                <p class="section-subtitle">Call<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Email</p>
+                <p class="section-desc">Send us your date, group size and package. We'll handle the setup.</p>
+            </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="tel:5874104105" class="btn btn-primary">Call to Book</a>
+                            <a href="mailto:contact@overklocked.com?subject=Party%20Booking" class="btn btn-outline">Email Us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+            <div class="section-head">
+                <h2 class="section-title">Party <span class="accent">FAQ</span></h2>
+                <p class="section-subtitle">Got Questions<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>We Got You</p>
+                <p class="section-desc">Here's what people usually ask us before booking.</p>
+            </div>
+                <div class="max-w-3xl mx-auto card p-8 faq">
+                    <details open>
+                        <summary>Can I book a party for fewer than 10 people?</summary>
+                        <p>Yes! Our rate is $8/hr per person. If you're staying longer, we recommend a Day Pass ($48/person).</p>
+                    </details>
+                    <details>
+                        <summary>Can I bring in food?</summary>
+                        <p>Yes, anything from pizza to cake. We have tables, plates and napkins available. The only restriction: outside snacks like chips, pop and energy drinks aren't allowed since we sell them here.</p>
+                    </details>
+                    <details>
+                        <summary>Can the party swap between PC and console?</summary>
+                        <p>Absolutely! Just let us know in advance so we can have everything set up when you arrive.</p>
+                    </details>
+                    <details>
+                        <summary>There are just a few of us. Do we have to book?</summary>
+                        <p>No need to book ahead. If you're a group of 5 or fewer it's easy to just walk in, sit down and play!</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact" class="site-footer pt-6 pb-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[3fr_2.5fr_2.5fr_2fr] gap-8 lg:gap-8 mb-5">
+
+                <div>
+                    <a href="index.html"><img src="images/logo-nav.png" alt="OverKlocked Gaming" class="h-16 w-auto mb-5"></a>
+                    <p class="muted text-sm leading-relaxed max-w-xs">Edmonton's premier place to game. Alberta's largest LAN center with 100+ systems under one roof.</p>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Connect With Us</h2>
+                    <div class="flex gap-3 mb-6">
+                        <a href="#" class="social" aria-label="Discord" title="Discord">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </a>
+                        <a href="#" class="social" aria-label="X (Twitter)" title="X (Twitter)">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social" aria-label="Instagram" title="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                    <ul class="text-sm space-y-3">
+                        <li><a href="tel:5874104105" class="accent inline-flex items-center gap-2 hover:underline"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> (587) 410 4105</a></li>
+                        <li><a href="mailto:contact@overklocked.com" class="accent inline-flex items-center gap-2 hover:underline"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> contact@overklocked.com</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Store Hours</h2>
+                    <ul class="text-sm">
+                        <li class="hours-row"><span class="muted">Mon to Thu</span><span class="font-display font-bold tracking-wider">12pm to 1am</span></li>
+                        <li class="hours-row"><span class="muted">Friday</span><span class="font-display font-bold tracking-wider">12pm to 3am</span></li>
+                        <li class="hours-row"><span class="muted">Saturday</span><span class="font-display font-bold tracking-wider">11am to 3am</span></li>
+                        <li class="hours-row"><span class="muted">Sunday</span><span class="font-display font-bold tracking-wider">11am to 1am</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Location</h2>
+                    <address class="not-italic muted text-sm mb-3 leading-relaxed">
+                        11618 119 St NW<br>
+                        Edmonton, AB<br>
+                        T5G 2X7
+                    </address>
+                    <a href="https://maps.google.com/?q=11618+119+St+NW,+Edmonton" target="_blank" rel="noopener" class="link-arrow text-sm">View map <span>→</span></a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-4 text-center">
+                <p class="muted text-xs uppercase tracking-widest font-display">© 2026 OverKlocked Gaming</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

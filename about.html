@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | OverKlocked Gaming</title>
+    <meta name="description" content="About OverKlocked Gaming: our story, our PC and console systems, and our staff.">
+    <link rel="icon" type="image/png" href="images/logo-nav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about" class="antialiased min-h-screen flex flex-col">
+
+    <nav class="site-nav fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="nav-bar flex items-center justify-between h-20">
+                <a href="index.html" class="nav-logo flex-shrink-0" aria-label="OverKlocked Gaming home">
+                    <img src="images/logo-nav.png" alt="OverKlocked Gaming">
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" data-nav="home" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Home</a>
+                    <a href="games.html" data-nav="games" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Games</a>
+                    <a href="pricing.html" data-nav="pricing" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Pricing</a>
+                    <a href="about.html" data-nav="about" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">About</a>
+                    <a href="#contact" class="nav-link px-1 py-2 text-sm font-bold uppercase tracking-wider">Contact</a>
+                    <a href="pricing.html#party-packages" class="btn btn-primary btn-sm">Book a Party</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gaming-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="index.html" data-nav="home" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Home</a>
+                <a href="games.html" data-nav="games" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Games</a>
+                <a href="pricing.html" data-nav="pricing" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Pricing</a>
+                <a href="about.html" data-nav="about" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">About</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 text-base font-bold uppercase tracking-wider">Contact</a>
+                <a href="pricing.html#party-packages" class="btn btn-primary btn-sm w-full mt-2">Book a Party</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <header class="page-hero">
+            <img src="images/group2.jpg" alt="" class="bg-media" style="object-position: center;">
+            <h1 class="text-5xl md:text-6xl font-display font-bold uppercase tracking-tight mb-4 fade-up delay-1">About <span class="accent">Us</span></h1>
+            <p class="hero-subtitle fade-up delay-2">By Gamers<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>For Gamers</p>
+            <p class="muted text-lg max-w-2xl mx-auto fade-up delay-2">We're a bunch of gamers who love bringing people together. Come say hi at Edmonton's biggest LAN center, where there are over 100 systems and a friendly crew that's always happy to help.</p>
+        </header>
+
+        <div class="max-w-5xl mx-auto px-4 pb-8">
+            <div class="flex flex-wrap justify-center gap-3 md:gap-12 mb-6 border-b border-white/10" role="tablist">
+                <button data-tab="overview" class="about-tab-btn pb-3 px-2 text-sm md:text-lg font-display uppercase font-bold tracking-wider" role="tab">Overview</button>
+                <button data-tab="systems" class="about-tab-btn pb-3 px-2 text-sm md:text-lg font-display uppercase font-bold tracking-wider" role="tab">Our Systems</button>
+                <button data-tab="staff" class="about-tab-btn pb-3 px-2 text-sm md:text-lg font-display uppercase font-bold tracking-wider" role="tab">Our Staff</button>
+            </div>
+
+            <!-- OVERVIEW -->
+            <section id="tab-overview" class="about-tab" role="tabpanel">
+                <div class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">Why <span class="accent">OverKlocked?</span></h2>
+                <p class="section-subtitle">Casual<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Competitive<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Community</p>
+                <p class="section-desc">We live by the 3 C's of gaming: <strong class="text-white">casual, competitive and community</strong>. Our wide game selection, powerful systems and friendly environment mean you get the best out of every session. We're always adding titles, so if we don't have the one you want, tell us and we'll try to pick it up!</p>
+            </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card card-hover p-6">
+                        <h3 class="text-xl font-display font-bold accent mb-3 uppercase">Competitive</h3>
+                        <p class="muted">Test your skills against the best players in the region. We regularly host tournaments for the most popular games, or drop in on a weekly promotion to see how you stack up.</p>
+                    </div>
+                    <div class="card card-hover p-6">
+                        <h3 class="text-xl font-display font-bold accent mb-3 uppercase">Community</h3>
+                        <p class="muted">Our number one goal is to grow Edmonton's gaming community. Looking for people who love the same games to share strategies or talk esports? Countless friendships have started here.</p>
+                    </div>
+                    <div class="card card-hover p-6">
+                        <h3 class="text-xl font-display font-bold accent mb-3 uppercase">Casual</h3>
+                        <p class="muted">Just killing a few hours? Catch your favourite teams or streamers on our 90" projector in the viewing area. A great place to hang out.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">Alberta's Largest <span class="accent">LAN Center</span></h2>
+                <p class="section-subtitle">Edmonton<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>100+ Systems</p>
+                <p class="section-desc">OverKlocked is Edmonton's premier destination for video gaming, and the largest LAN center in the city and in all of Alberta.</p>
+            </div>
+                    <div class="photo aspect-video md:aspect-[21/9]">
+                        <img src="images/groupcolor.jpg" alt="Players at OverKlocked" loading="lazy">
+                    </div>
+                </div>
+                <div>
+            <div class="section-head">
+                <h2 class="section-title">What Is a <span class="accent">LAN?</span></h2>
+                <p class="section-subtitle">Local Network<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>5ms Response</p>
+                <p class="section-desc">LAN stands for Local Area Network: nearly instant response times, as low as 5ms in some games, against people just a few feet away. Whether you're teaming up to take down that final raid boss or proving who's the better mid laner, there's no better feeling than playing with people you can see.</p>
+            </div>
+                </div>
+            </section>
+
+            <!-- SYSTEMS -->
+            <section id="tab-systems" class="about-tab" role="tabpanel" hidden>
+                <div class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">Our <span class="accent">Systems</span></h2>
+                <p class="section-subtitle">Custom Built<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Always Upgrading</p>
+                <p class="section-desc">Every PC is custom built with one purpose in mind: <span class="accent">gaming</span>. We're constantly upgrading systems and peripherals to give you the best possible experience.</p>
+            </div>
+                    <div class="photo aspect-[21/9] mx-auto" style="width: 70%;">
+                    <img src="images/machines.jpg" alt="Rows of OverKlocked gaming stations under blue light" loading="lazy">
+                </div>
+                </div>
+                <div class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">Gear at <span class="accent">Every Seat</span></h2>
+                <p class="section-subtitle">SteelSeries<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Sennheiser</p>
+                <p class="section-desc">Pro level peripherals at every station for complete control and immersion. Controllers are available on request!</p>
+            </div>
+                    <div class="card p-6 md:p-8">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 muted">
+                        <li class="flex gap-2"><span class="accent">▪</span> SteelSeries Apex Pro OmniPoint keyboards</li>
+                        <li class="flex gap-2"><span class="accent">▪</span> SteelSeries Sensei or Rival mice</li>
+                        <li class="flex gap-2"><span class="accent">▪</span> Sennheiser gaming headsets</li>
+                        <li class="flex gap-2"><span class="accent">▪</span> SteelSeries XL or Mad Catz XL mousepads</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="section-block grid md:grid-cols-2 gap-8">
+                    <div>
+            <div class="section-head">
+                <h2 class="section-title">Main <span class="accent">Room</span></h2>
+                <p class="section-subtitle">144Hz<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>1080p</p>
+                <p class="section-desc">Where most of the action happens, with rows of fast PCs ready to go.</p>
+            </div>
+                        <div class="space-y-4">
+                            <div class="card-inset p-5"><span class="badge mb-3">Brand New</span><ul class="muted space-y-1"><li><strong class="text-white">CPU:</strong> AMD Ryzen 7 9800X3D 4.7GHz</li><li><strong class="text-white">RAM:</strong> 32GB DDR5</li><li><strong class="text-white">Video:</strong> Radeon RX 9070 XT 16GB</li><li><strong class="text-white">Storage:</strong> Massive NVMe SSD/NAS</li></ul></div>
+                            <div class="card-inset p-5"><ul class="muted space-y-1"><li><strong class="text-white">CPU:</strong> Intel Core i7 13700KF, 16 core 5.4GHz</li><li><strong class="text-white">RAM:</strong> 32GB DDR4</li><li><strong class="text-white">Video:</strong> GeForce RTX 4070</li></ul></div>
+                            <div class="card-inset p-5"><ul class="muted space-y-1"><li><strong class="text-white">CPU:</strong> Intel Core i7 12700KF, 12 core 5GHz</li><li><strong class="text-white">RAM:</strong> 32GB DDR4</li><li><strong class="text-white">Video:</strong> GeForce RTX 4070 Super</li></ul></div>
+                        </div>
+                    </div>
+                    <div>
+            <div class="section-head">
+                <h2 class="section-title">The Red <span class="accent">Room</span></h2>
+                <p class="section-subtitle">144Hz<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>1440p</p>
+                <p class="section-desc">Our private back room with 21 PCs. Perfect for parties and team nights.</p>
+            </div>
+                        <div class="space-y-4">
+                            <div class="card-inset p-5"><ul class="muted space-y-1"><li><strong class="text-white">CPU:</strong> AMD Ryzen 7 9800X3D 4.7GHz</li><li><strong class="text-white">RAM:</strong> 32GB DDR5</li><li><strong class="text-white">Video:</strong> Radeon RX 9070 XT 16GB</li><li><strong class="text-white">Storage:</strong> Massive NVMe SSD/NAS</li></ul></div>
+                            <div class="card-inset p-5"><ul class="muted space-y-1"><li><strong class="text-white">CPU:</strong> Intel Core i7 10700KF, 8 core 4.8GHz</li><li><strong class="text-white">RAM:</strong> 16GB DDR4</li><li><strong class="text-white">Video:</strong> GeForce RTX 3080</li></ul></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+            <div class="section-head">
+                <h2 class="section-title">Console <span class="accent">Gaming</span></h2>
+                <p class="section-subtitle">PS5<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Switch</p>
+                <p class="section-desc">Two 65" big screen TVs with PS5s or Switches for the console gamer! Jump into Mario Party or Super Smash Bros., or settle who's actually the best at 2K or NHL. We've got you covered.</p>
+            </div>
+                </div>
+            </section>
+
+            <!-- STAFF -->
+            <section id="tab-staff" class="about-tab" role="tabpanel" hidden>
+                <div class="section-block">
+            <div class="section-head">
+                <h2 class="section-title">More Than <span class="accent">Cashiers</span></h2>
+                <p class="section-subtitle">Techs<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Builders<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Gamers</p>
+                <p class="section-desc">Our staff are qualified technicians, custom PC builders and passionate gamers. We make sure your session is seamless from the moment you sit down.</p>
+            </div>
+                    <div class="photo aspect-[4/3] max-w-xl mx-auto">
+                        <img src="images/solo1.jpg" alt="Focused gamer wearing a headset" loading="lazy">
+                    </div>
+                </div>
+                <div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="card card-hover p-7">
+                        <h3 class="text-2xl font-display font-bold accent mb-3 uppercase">Hardware Specialists</h3>
+                        <p class="muted leading-relaxed text-lg">Every PC is custom built and maintained by our own team. Technical issue, peripheral tweak, or a question about specs? Our staff can troubleshoot and fix it on the spot.</p>
+                    </div>
+                    <div class="card card-hover p-7">
+                        <h3 class="text-2xl font-display font-bold accent mb-3 uppercase">Game Knowledge</h3>
+                        <p class="muted leading-relaxed text-lg">Stuck joining a lobby? Want settings tuned for max FPS? Our team plays the games we host, so we'll help with launchers and local multiplayer and get you into your game faster.</p>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact" class="site-footer pt-6 pb-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[3fr_2.5fr_2.5fr_2fr] gap-8 lg:gap-8 mb-5">
+
+                <div>
+                    <a href="index.html"><img src="images/logo-nav.png" alt="OverKlocked Gaming" class="h-16 w-auto mb-5"></a>
+                    <p class="muted text-sm leading-relaxed max-w-xs">Edmonton's premier place to game. Alberta's largest LAN center with 100+ systems under one roof.</p>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Connect With Us</h2>
+                    <div class="flex gap-3 mb-6">
+                        <a href="#" class="social" aria-label="Discord" title="Discord">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </a>
+                        <a href="#" class="social" aria-label="X (Twitter)" title="X (Twitter)">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social" aria-label="Instagram" title="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                    <ul class="text-sm space-y-3">
+                        <li><a href="tel:5874104105" class="accent inline-flex items-center gap-2 hover:underline"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> (587) 410 4105</a></li>
+                        <li><a href="mailto:contact@overklocked.com" class="accent inline-flex items-center gap-2 hover:underline"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> contact@overklocked.com</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Store Hours</h2>
+                    <ul class="text-sm">
+                        <li class="hours-row"><span class="muted">Mon to Thu</span><span class="font-display font-bold tracking-wider">12pm to 1am</span></li>
+                        <li class="hours-row"><span class="muted">Friday</span><span class="font-display font-bold tracking-wider">12pm to 3am</span></li>
+                        <li class="hours-row"><span class="muted">Saturday</span><span class="font-display font-bold tracking-wider">11am to 3am</span></li>
+                        <li class="hours-row"><span class="muted">Sunday</span><span class="font-display font-bold tracking-wider">11am to 1am</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-heading">Location</h2>
+                    <address class="not-italic muted text-sm mb-3 leading-relaxed">
+                        11618 119 St NW<br>
+                        Edmonton, AB<br>
+                        T5G 2X7
+                    </address>
+                    <a href="https://maps.google.com/?q=11618+119+St+NW,+Edmonton" target="_blank" rel="noopener" class="link-arrow text-sm">View map <span>→</span></a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-4 text-center">
+                <p class="muted text-xs uppercase tracking-widest font-display">© 2026 OverKlocked Gaming</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
