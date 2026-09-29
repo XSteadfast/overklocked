@@ -65,7 +65,8 @@ const GAME_CATEGORIES = {
     const grid = document.getElementById('gameGrid');
     const catNav = document.getElementById('catNav');
     const countEl = document.getElementById('gameCount');
-    const featured = document.getElementById('featuredGames');
+    const suggest = document.getElementById('searchSuggest');
+    const library = document.getElementById('library');
     const viewBtns = document.querySelectorAll('[data-view]');
 
     const ALL = Object.entries(GAME_CATEGORIES)
@@ -90,8 +91,12 @@ const GAME_CATEGORIES = {
         return wrap;
     }
 
+    // Search ignores dashes and extra spaces, so "counter-strike" finds "Counter Strike"
+    const normalize = v => v.replace(/[-–—]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+    const escapeHtml = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
     function render() {
-        const q = search.value.replace(/[-–—]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+        const q = normalize(search.value);
         const matches = ALL.filter(g => g.title.toLowerCase().includes(q));
 
         countEl.textContent = matches.length;
@@ -135,6 +140,78 @@ const GAME_CATEGORIES = {
         try { localStorage.setItem('ok-game-view', view); } catch (e) {}
         render();
     }));
-    search.addEventListener('input', render);
+    // ---- Live suggestions under the search box ----
+    let options = [];
+    let active = -1;
+
+    function closeSuggestions() {
+        suggest.hidden = true;
+        search.setAttribute('aria-expanded', 'false');
+        search.removeAttribute('aria-activedescendant');
+        active = -1;
+    }
+
+    function highlight(i) {
+        active = i;
+        suggest.querySelectorAll('[role="option"]').forEach((li, n) => li.setAttribute('aria-selected', n === i));
+        if (i >= 0) {
+            search.setAttribute('aria-activedescendant', 'suggest-' + i);
+            suggest.children[i].scrollIntoView({ block: 'nearest' });
+        } else {
+            search.removeAttribute('aria-activedescendant');
+        }
+    }
+
+    function showSuggestions() {
+        const q = normalize(search.value);
+        if (!q) { closeSuggestions(); return; }
+
+        // Titles that start with the search come first, then ones that contain it
+        options = ALL.filter(g => g.title.toLowerCase().includes(q))
+            .sort((a, b) => (b.title.toLowerCase().startsWith(q) - a.title.toLowerCase().startsWith(q)) || a.title.localeCompare(b.title))
+            .slice(0, 8);
+
+        suggest.innerHTML = options.length
+            ? options.map((g, i) => {
+                const at = g.title.toLowerCase().indexOf(q);
+                const name = escapeHtml(g.title.slice(0, at)) + '<mark>' + escapeHtml(g.title.slice(at, at + q.length)) + '</mark>' + escapeHtml(g.title.slice(at + q.length));
+                return `<li id="suggest-${i}" role="option" aria-selected="false" data-i="${i}"><span>${name}</span><span class="suggest-genre">${g.cat}</span></li>`;
+            }).join('')
+            : '<li class="suggest-empty">No match yet. Ask our staff, we\'re always adding new titles!</li>';
+
+        active = -1;
+        suggest.hidden = false;
+        search.setAttribute('aria-expanded', 'true');
+    }
+
+    function choose(i) {
+        search.value = options[i].title;
+        closeSuggestions();
+        render();
+        library.scrollIntoView({ block: 'start' });
+    }
+
+    search.addEventListener('input', () => { render(); showSuggestions(); });
+    search.addEventListener('focus', showSuggestions);
+    search.addEventListener('blur', () => setTimeout(closeSuggestions, 120));
+    search.addEventListener('keydown', e => {
+        const count = suggest.hidden ? 0 : options.length;
+        if (e.key === 'ArrowDown' && count) { e.preventDefault(); highlight((active + 1) % count); }
+        else if (e.key === 'ArrowUp' && count) { e.preventDefault(); highlight((active - 1 + count) % count); }
+        else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (active >= 0) choose(active);
+            else { closeSuggestions(); if (search.value.trim()) library.scrollIntoView({ block: 'start' }); }
+        }
+        else if (e.key === 'Escape') closeSuggestions();
+    });
+    // mousedown (not click) so the choice lands before the search box loses focus
+    suggest.addEventListener('mousedown', e => {
+        const li = e.target.closest('[role="option"]');
+        if (!li) return;
+        e.preventDefault();
+        choose(Number(li.dataset.i));
+    });
+
     render();
 })();

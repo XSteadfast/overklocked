@@ -49,15 +49,24 @@
             <img src="images/group2.jpg" alt="" class="bg-media" style="object-position: center 30%;">
             <h1 class="text-5xl md:text-6xl font-display font-bold uppercase tracking-tight mb-4 fade-up delay-1">Our Game <span class="accent">Library</span></h1>
             <p class="hero-subtitle fade-up delay-2">Installed<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Ready to Play</p>
-            <p class="muted text-lg max-w-2xl mx-auto fade-up delay-2">Whatever you're in the mood for, we've probably got it installed and ready to go. Can't find your favourite? Just ask us and we'll do our best to add it!</p>
+            <p class="muted text-lg max-w-2xl mx-auto fade-up delay-2">Start typing a game name below to check if we have it installed. If it doesn't show up, ask our staff and we'll do our best to get it added!</p>
         </header>
 
         <div class="max-w-6xl mx-auto px-4 pb-8">
+            <div class="max-w-3xl mx-auto mb-10">
+                <label for="gameSearch" class="sr-only">Search the game library</label>
+                <div class="relative">
+                    <svg class="w-5 h-5 muted absolute left-5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
+                    <input type="search" id="gameSearch" placeholder="Search the library..." autocomplete="off" class="search-input"
+                           role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="searchSuggest">
+                    <ul id="searchSuggest" class="search-suggest" role="listbox" aria-label="Matching games" hidden></ul>
+                </div>
+            </div>
+
             <section id="featuredGames" class="section-block">
             <div class="section-head">
                 <h2 class="section-title">Most <span class="accent">Played</span></h2>
                 <p class="section-subtitle">Fan Favourites<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>Always Ready</p>
-                <p class="section-desc">The games lighting up our screens every night. Hop in and queue up with the regulars.</p>
             </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="game-card card card-hover overflow-hidden flex flex-col">
@@ -87,19 +96,13 @@
                 </div>
             </section>
 
-            <section class="section-block">
+            <section id="library" class="section-block">
             <div class="section-head">
                 <h2 class="section-title">Full <span class="accent">Library</span></h2>
                 <p class="section-subtitle">A to Z<span class="sep" aria-hidden="true">//</span><span class="sr-only">, </span>By Genre</p>
-                <p class="section-desc">Search for anything by name, or switch to By Genre when you want to find something new to play.</p>
             </div>
                 <div class="max-w-3xl mx-auto mb-6">
-                    <label for="gameSearch" class="sr-only">Search the game library</label>
-                <div class="relative">
-                    <svg class="w-5 h-5 muted absolute left-5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg>
-                    <input type="search" id="gameSearch" placeholder="Search the library..." autocomplete="off" class="search-input">
-                </div>
-                    <div class="flex items-center justify-between gap-4 mt-4">
+                    <div class="flex items-center justify-between gap-4">
                         <div class="view-toggle" role="group" aria-label="Sort the game list">
                             <button type="button" data-view="az" aria-pressed="true">A to Z</button>
                             <button type="button" data-view="cat" aria-pressed="false">By Genre</button>

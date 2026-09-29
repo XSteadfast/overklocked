@@ -1456,6 +1456,45 @@ body {
 .search-input:focus { border-color: var(--ok-accent); box-shadow: 0 0 0 4px rgba(47, 180, 255, 0.15); }
 
 
+/* Live suggestions dropdown under the search box */
+.search-suggest {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 30;
+    max-height: 22rem;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background: var(--ok-card);
+    border: 1px solid rgba(47, 180, 255, 0.35);
+    border-radius: 10px;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.8);
+}
+.search-suggest li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #fff;
+}
+.search-suggest li[aria-selected="true"], .search-suggest li[role="option"]:hover { background: rgba(47, 180, 255, 0.14); }
+.search-suggest mark { background: none; color: var(--ok-accent); font-weight: 700; }
+.suggest-genre {
+    flex-shrink: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ok-muted);
+}
+.search-suggest .suggest-empty { cursor: default; color: var(--ok-muted); }
+
 .game-tile {
     background: var(--ok-dark);
     border: 1px solid var(--ok-border);
