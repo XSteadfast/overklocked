@@ -1275,7 +1275,7 @@ body {
     background-clip: text;
     color: transparent;
 }
-.stat span {
+.stat > span {
     display: block;
     margin-top: 0.4rem;
     font-size: 0.75rem;
@@ -1608,6 +1608,41 @@ body {
 .hours-row:last-child { border-bottom: 0; }
 
 /* ---------- Animations ---------- */
+/* Scroll progress bar (added to the header by main.js) */
+.scroll-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--ok-gradient);
+    box-shadow: 0 0 8px var(--ok-accent-glow);
+    transform: scaleX(0);
+    transform-origin: left;
+    pointer-events: none;
+}
+
+/* Typing subtitles: each letter is hidden until main.js switches it on */
+.tchar { opacity: 0; }
+.tchar.on { opacity: 1; }
+.tchar.caret { position: relative; }
+.tchar.caret::after {                 /* blinking block cursor just after the newest letter */
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 12%;
+    bottom: 12%;
+    width: 0.5em;
+    margin-left: 0.08em;
+    background: var(--ok-accent);
+    box-shadow: 0 0 8px var(--ok-accent-glow);
+    animation: caretBlink 0.6s steps(1) infinite;
+}
+@keyframes caretBlink { 50% { opacity: 0; } }
+
+/* Counting stats: equal width digits so the numbers don't wobble */
+.stat strong { font-variant-numeric: tabular-nums; }
+
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
